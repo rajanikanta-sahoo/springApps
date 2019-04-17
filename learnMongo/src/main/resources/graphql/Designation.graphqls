@@ -1,0 +1,10 @@
+type Designation{
+	id:String
+	name:String
+	authoritys: [Authority]
+}
+
+extend type Query{
+
+	allDesignation:[Designation]
+}

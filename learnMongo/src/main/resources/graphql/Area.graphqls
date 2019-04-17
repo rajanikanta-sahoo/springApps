@@ -1,0 +1,17 @@
+type Area{
+	
+	id:String
+	areaId:Int
+	areaName:String
+	isLive:Int
+	parentId:Int
+	areaLevelId:AreaLevel
+}
+
+extend type Query{
+	
+	limitAreas(count: Int, Offset: Int):[Employee]
+	allArea:[Area]
+	area(areaId:Int):Area
+	
+}

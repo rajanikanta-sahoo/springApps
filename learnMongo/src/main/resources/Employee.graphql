@@ -1,0 +1,62 @@
+type Employee {
+	id:String
+	name:String
+	userName:String
+	password:String
+	companyEmail:String
+	currentAddress:String
+	email:String
+	fatherName:String
+	fatherNo:String
+	gender:String
+	mobile:String
+	motherName:String
+	permanentAddress:String
+	designation: [Designation]
+}
+
+type Designation{
+	id:String
+	name:String
+	authoritys: [Authority]
+}
+
+type Authority{
+	id:String
+	authority:String
+	description:String
+}
+
+type Area{
+	
+	id:String
+	areaId:Int
+	areaName:String
+	isLive:Int
+	parentId:Int
+	areaLevelId:AreaLevel
+}
+type AreaLevel{
+
+	id:String
+	areaLevelId:Int
+	areaLevel:Int
+	areaLevelName:String
+	parentAreaLevel:Int
+	
+}
+
+type Query{
+	
+	allEmployee: [Employee]
+	employee(userName: String): Employee	
+	limitEmployees(count: Int, Offset: Int):[Employee]
+	limitAreas(count: Int, Offset: Int):[Employee]
+	allArea:[Area]
+	area(areaId:Int):Area
+	
+}
+
+schema { 
+	query: Query
+	}

@@ -1,0 +1,27 @@
+type Area{
+	
+	id:String
+	areaId:Integer
+	areaName:String
+	isLive:Integer
+	parentId:Integer
+	areaLevelId:AreaLevel
+}
+type AreaLevel{
+
+	id:String
+	areaLevelId:Integer
+	areaLevel:Integer
+	areaLevelName:String
+	parentAreaLevel:Integer
+	
+}
+
+type Query{
+	allArea:[Area]
+	area(areaId:Integer):Area
+}
+
+schema { 
+	query: Query
+	}

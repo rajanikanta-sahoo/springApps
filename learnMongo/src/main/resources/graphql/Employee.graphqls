@@ -1,0 +1,24 @@
+type Employee {
+	id:String
+	name:String
+	userName:String
+	password:String
+	companyEmail:String
+	currentAddress:String
+	email:String
+	fatherName:String
+	fatherNo:String
+	gender:String
+	mobile:String
+	motherName:String
+	permanentAddress:String
+	designation: [Designation]
+}
+
+extend type Query{
+	
+	allEmployee: [Employee]
+	employee(userName: String): Employee	
+	limitEmployees(count: Int, Offset: Int):[Employee]
+	
+}

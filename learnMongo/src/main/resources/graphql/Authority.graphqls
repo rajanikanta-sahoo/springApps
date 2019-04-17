@@ -1,0 +1,9 @@
+type Authority{
+	id:String
+	authority:String
+	description:String
+}
+
+ type Query{
+	allAthority:[Authority]
+}
